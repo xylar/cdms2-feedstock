@@ -1,14 +1,13 @@
 {% set name = "cdms2" %}
-{% set version = "2.8" %}
+{% set version = "2.10" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/UV-CDAT/cdms/archive/v{{ version }}.tar.gz
-  sha256: 90665e6bca64af818b1ee6c6a042f53270d2cf24ba3aa6f23513bbe6b35e7d4b
+  sha256: 41b687a8be716a9fc75011a3d3dfb68afd9c3135f49853cd9e4248a83e93bb88
 
 build:
   number: 0
