@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/UV-CDAT/cdms/archive/v{{ version }}.tar.gz
-  sha256: 41b687a8be716a9fc75011a3d3dfb68afd9c3135f49853cd9e4248a83e93bb88
+  sha256: 70e52a24654953c0362a6036d2d2faebaf4024145418a77453a2476ffe168612
 
 build:
   number: 0
