@@ -1,5 +1,5 @@
 {% set name = "cdms2" %}
-{% set version = "2.10.1" %}
+{% set version = "2.10" %}
 
 package:
   name: {{ name|lower }}
@@ -10,7 +10,7 @@ source:
   sha256: 70e52a24654953c0362a6036d2d2faebaf4024145418a77453a2476ffe168612
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win or py3k] 
 
 requirements:
