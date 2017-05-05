@@ -15,29 +15,31 @@ build:
 
 requirements:
   build:
+    - toolchain  # [osx]
     - python
     - setuptools
     - libcdms
     - cdat_info
     - numpy x.x
     - libdrs_f
-    - gcc
-
+    - gcc  # [linux]
   run:
     - python
-    - cdtime
     - libcf
     - distarray
+    - cdtime
     - libcdms
     - cdat_info
     - numpy x.x
-    - esmp <7
+    - esmf >=7
+    - esmpy
     - libdrs_f
     - pyopenssl
+    - libgcc  # [linux]
 
 test:
   commands:
-    - export UVCDAT_ANONYMOUS_LOG=false && python -c "import cdms2"  
+      - export UVCDAT_ANONYMOUS_LOG=false && python -c "import cdms2"  
 
 about:
   home:  http://uvcdat.llnl.gov/documentation/cdms/cdms.html
