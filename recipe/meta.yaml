@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/UV-CDAT/cdms/archive/v{{ version }}.tar.gz
-  sha256: 68fe7d42950e5284145145fa7eaf9cdd1dcd55b63848052fd43275421ea6cf16
+  sha256: b8816450c665bd67a5193b2da4e4e9db2bcadedf8e3dd07be3dec2722c672ff5
 
 build:
-  number: 2
+  number: 3
   skip: True  # [win or py3k] 
 
 requirements:
