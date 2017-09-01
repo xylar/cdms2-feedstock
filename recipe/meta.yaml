@@ -1,5 +1,5 @@
 {% set name = "cdms2" %}
-{% set version = "2.10" %}
+{% set version = "2.12" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/UV-CDAT/cdms/archive/v{{ version }}.tar.gz
-  sha256: b8816450c665bd67a5193b2da4e4e9db2bcadedf8e3dd07be3dec2722c672ff5
+  sha256: 0aba8451521010d05c1317d21ad0e76a2fca8a5533b05a0f88af920a47ae2456
 
 build:
-  number: 3
+  number: 0
   skip: True  # [win or py3k] 
 
 requirements:
