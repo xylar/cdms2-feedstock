@@ -1,5 +1,5 @@
 {% set name = "cdms2" %}
-{% set version = "2.12" %}
+{% set version = "3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -11,7 +11,7 @@ source:
 
 build:
   number: 0
-  skip: True  # [win or py3k] 
+  skip: True  # [win] 
 
 requirements:
   build:
@@ -20,7 +20,7 @@ requirements:
     - setuptools
     - libcdms
     - cdat_info
-    - numpy x.x
+    - numpy 1.11.*
     - libdrs_f
     - gcc  # [linux]
   run:
@@ -30,9 +30,9 @@ requirements:
     - cdtime
     - libcdms
     - cdat_info
-    - numpy x.x
+    - numpy >=1.11
     - esmf >=7
-    - esmpy
+    - esmpy  # [not (py35 or py36)]
     - libdrs_f
     - pyopenssl
     - libgcc  # [linux]
