@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/UV-CDAT/cdms/archive/master.tar.gz
-  sha256: bd6a8f14095a44b35da369a9d76ba75e75ce32829572151331090e2541f9d2ff
+  url: https://github.com/UV-CDAT/cdms/archive/v{{ version }}.tar.gz
+  sha256: bb0efb3fb6c4c8135319d3a22cc6cd0a829121cff49aa5d48be95d4206f295ad
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win] 
 
 requirements:
