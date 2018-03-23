@@ -10,7 +10,7 @@ source:
   sha256: 0c11960687234999d17842eaf732bb0a71c004129925e61fc226c0d5faad32a6
 
 build:
-  number: 3
+  number: 4
   skip: True  # [win] 
 
 requirements:
@@ -31,8 +31,8 @@ requirements:
     - libcdms
     - cdat_info
     - numpy >=1.11
-    - esmf >=7
-    - esmpy  # [not (py35 or py36)]
+    - esmf >=7.1.*
+    - esmpy >=7.1.*
     - libdrs_f
     - pyopenssl
     - libgcc  # [linux]
