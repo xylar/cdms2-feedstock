@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/CDAT/cdms/archive/v3.0.tar.gz
+  url: https://github.com/cdat/cdms/archive/v3.0.tar.gz
   sha256: 0c11960687234999d17842eaf732bb0a71c004129925e61fc226c0d5faad32a6
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win]
 
 requirements:
@@ -50,7 +50,7 @@ about:
     data management system, specialized for organizing
     multidimensional, gridded data used in climate
     analysis and simulation.
-  dev_url: http://github.com/UV-CDAT/cdms2
+  dev_url: http://github.com/cdat/cdms2
 
 extra:
   recipe-maintainers:
