@@ -1,17 +1,17 @@
 {% set name = "cdms2" %}
-{% set version = "3.0" %}
+{% set version = "3.1.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/UV-CDAT/cdms/archive/v{{ version }}.tar.gz
-  sha256: 0c11960687234999d17842eaf732bb0a71c004129925e61fc226c0d5faad32a6
+  url: https://github.com/CDAT/cdms/archive/v{{ version }}.tar.gz
+  sha256: 6090472c2601eb412f11fa57425bf7bcc8dcb464fb90eb921f41e3363ed38e41
 
 
 build:
-  number: 6
+  number: 0
   skip: True  # [win] 
 
 requirements:
@@ -43,7 +43,7 @@ test:
       - export UVCDAT_ANONYMOUS_LOG=false && python -c "import cdms2"  
 
 about:
-  home:  http://uvcdat.llnl.gov/documentation/cdms/cdms.html
+  home:  http://cdat.llnl.gov/documentation/cdms/cdms.html
   license: 'CCLRC'
   summary: 'Community Data Management System'
   description: |            
@@ -51,7 +51,7 @@ about:
     data management system, specialized for organizing 
     multidimensional, gridded data used in climate 
     analysis and simulation.
-  dev_url: http://github.com/UV-CDAT/cdms2
+  dev_url: http://github.com/CDAT/cdms2
 
 extra:
   recipe-maintainers:
