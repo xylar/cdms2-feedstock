@@ -7,8 +7,7 @@ package:
 
 source:
   url: https://github.com/CDAT/cdms/archive/v{{ version }}.tar.gz
-  sha256: 6090472c2601eb412f11fa57425bf7bcc8dcb464fb90eb921f41e3363ed38e41
-
+  sha256: 378bdbefef8c87f436e932d4e8bc0ba08e12c9f04e81e049eb3f35cc662cb8f7
 
 build:
   number: 0
@@ -21,17 +20,17 @@ requirements:
     - setuptools
     - libcdms
     - cdat_info
-    - numpy 1.11.*
-    - libdrs_f
+    - numpy
+    - libdrs_f 
     - gcc  # [linux]
   run:
     - python
     - libcf
     - distarray
     - cdtime
-    - libcdms
+    - libcdms 
     - cdat_info
-    - numpy >=1.11
+    - numpy >=1.11,<=1.14.6
     - esmf >=7.1.*
     - esmpy >=7.1.*
     - libdrs_f
