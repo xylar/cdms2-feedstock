@@ -6,12 +6,9 @@ export UVCDAT_ANONYMOUS_LOG=False
 
 if [ `uname` == Linux ]; then
     # To make sure we get the correct g++
-    export LD_LIBRARY_PATH=${PREFIX}/lib:${LIBRARY_PATH}
-    export CC="gcc -Wl,-rpath=${PREFIX}/lib"
-    export CXX="g++ -Wl,-rpath=${PREFIX}/lib"
+    # export LD_LIBRARY_PATH=${PREFIX}/lib:${LIBRARY_PATH}
+    LDSHARED="$CC -shared -pthread" python setup.py install
 else
-    export CC="gcc"
-    export CXX="g++"
+    python setup.py install
 fi
 
-python setup.py install
