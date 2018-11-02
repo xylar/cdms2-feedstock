@@ -1,9 +1,9 @@
 About cdms2
 ===========
 
-Home: http://cdat.llnl.gov/documentation/cdms/cdms.html
+Home: https://cdms.readthedocs.io/en/latest
 
-Package license: CCLRC
+Package license: 3-Clause BSD
 
 Feedstock license: BSD 3-Clause
 
