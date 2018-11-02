@@ -1,17 +1,17 @@
 {% set name = "cdms2" %}
-{% set version = "3.0.1" %}
+{% set version = "3.1.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/cdat/cdms/archive/v3.0.tar.gz
-  sha256: 0c11960687234999d17842eaf732bb0a71c004129925e61fc226c0d5faad32a6
+  url: https://github.com/CDAT/cdms/archive/v{{ version }}.tar.gz
+  sha256: 378bdbefef8c87f436e932d4e8bc0ba08e12c9f04e81e049eb3f35cc662cb8f7
 
 build:
-  number: 1
-  skip: True  # [win]
+  number: 0
+  skip: True  # [win] 
 
 requirements:
   build:
@@ -23,13 +23,13 @@ requirements:
     - libcdms
     - cdat_info
     - numpy
-    - libdrs_f
+    - libdrs_f 
   run:
     - python
     - libcf
     - distarray
     - cdtime
-    - libcdms
+    - libcdms 
     - cdat_info
     - {{ pin_compatible('numpy') }}
     - esmf >=7.1.*
@@ -42,15 +42,16 @@ test:
       - export UVCDAT_ANONYMOUS_LOG=false && python -c "import cdms2"
 
 about:
-  home:  http://uvcdat.llnl.gov/documentation/cdms/cdms.html
-  license: 'CCLRC'
+  home: https://cdms.readthedocs.io/en/latest
+  license: '3-Clause BSD'
+  license_file: 'bsd-3-clause.txt'
   summary: 'Community Data Management System'
   description: |
     The Community Data Management System is an object-oriented
     data management system, specialized for organizing
     multidimensional, gridded data used in climate
     analysis and simulation.
-  dev_url: http://github.com/cdat/cdms2
+  dev_url: http://github.com/CDAT/cdms2
 
 extra:
   recipe-maintainers:
