@@ -1,5 +1,5 @@
 {% set name = "cdms2" %}
-{% set version = "3.1.0" %}
+{% set version = "3.1.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/CDAT/cdms/archive/v{{ version }}.tar.gz
-  sha256: 378bdbefef8c87f436e932d4e8bc0ba08e12c9f04e81e049eb3f35cc662cb8f7
+  sha256: 384001a2aa6729eba8099f0c8a50b16d8fb5901ffe0c58e45e11b94f49ddfbf8
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win] 
 
 requirements:
@@ -18,22 +18,22 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('fortran') }}
   host:
-    - python
+    - python {{ python }}
     - setuptools
     - libcdms
     - cdat_info
     - numpy
     - libdrs_f 
   run:
-    - python
+    - python {{ python }}
     - libcf
     - distarray
     - cdtime
     - libcdms 
     - cdat_info
     - {{ pin_compatible('numpy') }}
-    - esmf >=7.1.*
-    - esmpy >=7.1.*
+    - esmf
+    - esmpy
     - libdrs_f
     - pyopenssl
 
