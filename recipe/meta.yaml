@@ -10,7 +10,7 @@ source:
   sha256: 384001a2aa6729eba8099f0c8a50b16d8fb5901ffe0c58e45e11b94f49ddfbf8
 
 build:
-  number: 5
+  number: 6
   skip: True  # [win] 
 
 requirements:
@@ -20,24 +20,24 @@ requirements:
   host:
     - python {{ python }}
     - setuptools
-    - libcdms
     - cdat_info
     - numpy
-    - libdrs_f 
-    - libdrs
+    - libcdms >=3.1.2
+    - libdrs_f >=3.1.2
+    - libdrs >=3.1.2
   run:
     - python {{ python }}
     - libcf
     - distarray
     - cdtime
-    - libcdms 
     - cdat_info
     - {{ pin_compatible('numpy') }}
     - esmf
     - esmpy
-    - libdrs_f
-    - libdrs
-    - pyopenssl
+    - libcdms >=3.1.2
+    - libdrs_f >=3.1.2
+    - libdrs >=3.1.2
+    - pyopenssl >1.1
 
 test:
   commands:
