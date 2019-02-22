@@ -40,7 +40,7 @@ requirements:
 
 test:
   commands:
-      - export UVCDAT_ANONYMOUS_LOG=false && python -c "import cdms2"
+      - export CDAT_ANONYMOUS_LOG=false && python -c "import cdms2"
 
 about:
   home: https://cdms.readthedocs.io/en/latest
