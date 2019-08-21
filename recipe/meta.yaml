@@ -1,5 +1,5 @@
 {% set name = "cdms2" %}
-{% set version = "3.1.2" %}
+{% set version = "3.1.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/CDAT/cdms/archive/v{{ version }}.tar.gz
-  sha256: 384001a2aa6729eba8099f0c8a50b16d8fb5901ffe0c58e45e11b94f49ddfbf8
+  sha256: 9402bd52e924b3ed05e30f04f300a0b09ad1fd8d288a9365be74f92130a412a6
 
 build:
   number: 7
@@ -16,27 +16,31 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
     - {{ compiler('fortran') }}
   host:
     - python {{ python }}
     - setuptools
-    - cdat_info >=8.1.1
+    - cdat_info >=8.2
     - numpy
     - libcdms >=3.1.2
     - libdrs_f >=3.1.2
     - libdrs >=3.1.2
+    - openblas
   run:
     - python {{ python }}
     - libcf
     - distarray
     - cdtime
-    - cdat_info >=8.1.1
+    - cdat_info >=8.2
     - {{ pin_compatible('numpy') }}
     - esmf
     - esmpy
     - libcdms >=3.1.2
     - libdrs_f >=3.1.2
     - libdrs >=3.1.2
+    - openblas
+    - lazy-object-proxy
 
 test:
   commands:
@@ -58,3 +62,5 @@ extra:
   recipe-maintainers:
     - dnadeau4
     - doutriaux1
+    - muryanto1
+    - downiec
