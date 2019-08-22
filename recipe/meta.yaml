@@ -27,20 +27,22 @@ requirements:
     - libdrs_f >=3.1.2
     - libdrs >=3.1.2
     - openblas
+    - lazy-object-proxy
   run:
     - python {{ python }}
     - libcf
     - distarray
+    - lazy-object-proxy
     - cdtime
     - cdat_info >=8.2
     - {{ pin_compatible('numpy') }}
     - esmf
     - esmpy
+    - six
     - libcdms >=3.1.2
     - libdrs_f >=3.1.2
     - libdrs >=3.1.2
     - openblas
-    - lazy-object-proxy
 
 test:
   commands:
