@@ -10,7 +10,7 @@ source:
   sha256: fa6bb6874c96d55b70526a575a970ba93224d21fddd33bc308a07af0d7db04de
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win] 
 
 requirements:
@@ -28,6 +28,7 @@ requirements:
     - libdrs >=3.1.2
     - openblas
     - lazy-object-proxy
+    - libnetcdf
   run:
     - python {{ python }}
     - libcf
@@ -43,6 +44,7 @@ requirements:
     - libdrs_f >=3.1.2
     - libdrs >=3.1.2
     - openblas
+    - libnetcdf
 
 test:
   commands:
