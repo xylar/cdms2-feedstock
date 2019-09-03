@@ -28,6 +28,7 @@ requirements:
     - libdrs >=3.1.2
     - openblas
     - lazy-object-proxy
+    - libnetcdf
   run:
     - python {{ python }}
     - libcf
@@ -43,6 +44,7 @@ requirements:
     - libdrs_f >=3.1.2
     - libdrs >=3.1.2
     - openblas
+    - libnetcdf
 
 test:
   commands:
